@@ -5,9 +5,9 @@ import "./VoteItem.scss";
 
 export default function VoteItem({ content, votes }) {
   return (
-    <div className="vote-item">
+    <button className="vote-item vote-button">
       <span>+{votes}</span>
       <li>{content}</li>
-    </div>
+    </button>
   );
 }

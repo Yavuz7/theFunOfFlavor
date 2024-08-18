@@ -6,9 +6,9 @@ import "./VoteTitle.scss";
 
 export default function VoteTitle({ content, votes }) {
   return (
-    <div className="vote-title">
+    <button className="vote-title vote-button">
       <span>+{votes}</span>
       <h1>{content}</h1>
-    </div>
+    </button>
   );
 }
