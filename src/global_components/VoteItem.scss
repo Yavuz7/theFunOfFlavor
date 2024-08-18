@@ -1,0 +1,13 @@
+@use "./index";
+
+.vote-item {
+  display: flex;
+  justify-content: flex-start;
+  li {
+    margin-left: 4rem;
+  }
+  span {
+    @include index.vote;
+    padding-top: 0.7rem;
+  }
+}

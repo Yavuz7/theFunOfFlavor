@@ -1,13 +1,24 @@
+//Site Variables
+$padding-for-nav: 150px; //Start of Recipe Text and Nav Bar
+
+//Colors
+$light-yellow: #fffadf; //Suggestions Sidebar
+$medium-yellow: #fff4bc; //Nav bar and unimportant buttons
+$dark-yellow: #ffe144; //Action Buttons
+$vote-grey: #616161; //Vote text and nav buttons
+
 @mixin title() {
   font-size: 3.5rem;
+  font-weight: bold;
 }
 
 @mixin body() {
   font-size: 2.5rem;
 }
 
-@mixin note() {
+@mixin vote() {
   font-size: 1.75rem;
+  color: $vote-grey;
 }
 
 @mixin recipeFormating() {
@@ -22,6 +33,29 @@
 }
 html {
   font-size: 10px;
+}
+
+.suggestions {
+  background-color: $light-yellow;
+  min-height: 100vh;
+  padding: $padding-for-nav 7% 0 2%;
+}
+
+.recipe {
+  padding-top: $padding-for-nav;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+
+  height: 70px;
+  background-color: $medium-yellow;
+  padding-left: 7%;
+  filter: drop-shadow(0px 7px 5px #00000012);
+  position: fixed;
+  width: 100vw;
 }
 
 /*

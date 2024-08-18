@@ -1,13 +1,12 @@
-import { useState } from "react";
 import "./app_style.scss";
+import VoteItem from "../global_components/VoteItem";
+import VoteTitle from "../global_components/VoteTitle";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <nav>
-        <h2>the fun of flavors</h2>
+        <VoteTitle content={"the fun of flavors"} votes={12} />
       </nav>
       <div className="column-container">
         <section className="recipe">
@@ -21,9 +20,9 @@ function App() {
         <section className="suggestions">
           <h2>Suggestions</h2>
           <ol>
-            <li>Have Fun Trying New Recipes</li>
-            <li>Share Your Wisdom Of Food</li>
-            <li>1 Tsp Of Paprika</li>
+            <VoteItem content={"Have Fun Trying New Recipes"} votes={12} />
+            <VoteItem content={"Share Your Wisdom Of Food"} votes={16} />
+            <VoteItem content={"1 Tsp Of Paprika"} votes={2} />
           </ol>
         </section>
         <div className="spacer"></div>
