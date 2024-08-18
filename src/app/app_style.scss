@@ -1,0 +1,14 @@
+@use "index";
+
+h2 {
+  @include index.title;
+}
+
+.column-container {
+  display: flex;
+  justify-content: space-around;
+  section {
+    @include index.body;
+    @include index.recipeFormating;
+  }
+}

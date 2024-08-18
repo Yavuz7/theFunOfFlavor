@@ -1,24 +1,32 @@
 import { useState } from "react";
-import "./app_style.css";
+import "./app_style.scss";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1>the fun of flavor</h1>
+      <nav>
+        <h2>the fun of flavors</h2>
+      </nav>
       <div className="column-container">
-        <div className="column">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="column">
-          Click on the Vite and React logos to learn more
-        </p>
+        <section className="recipe">
+          <h2>A Different Kind Of Recipe Site</h2>
+          <ol>
+            <li>Modular Recipe Pieces</li>
+            <li>Suggest Changes On Any Recipe</li>
+            <li>1 Tsp Of Salt</li>
+          </ol>
+        </section>
+        <section className="suggestions">
+          <h2>Suggestions</h2>
+          <ol>
+            <li>Have Fun Trying New Recipes</li>
+            <li>Share Your Wisdom Of Food</li>
+            <li>1 Tsp Of Paprika</li>
+          </ol>
+        </section>
+        <div className="spacer"></div>
       </div>
     </>
   );
