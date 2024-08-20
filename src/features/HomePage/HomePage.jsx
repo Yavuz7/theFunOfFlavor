@@ -1,11 +1,11 @@
-import NavBar from "../../global_components/NavBar";
 import VoteItem from "../../global_components/VoteItem";
 
 export default function HomePage() {
+  //Use effect hook or custom hook to grab JUST suggestions for the appropriate page
   return (
     <>
       <div className="column-container">
-        <section className="recipe">
+        <section className="recipe space-for-nav">
           <h2>A Different Kind Of Recipe Site</h2>
           <ol>
             <li>Modular Recipe Pieces</li>
@@ -14,7 +14,7 @@ export default function HomePage() {
           </ol>
           <button className="action-button">Explore The Recip-bilities</button>
         </section>
-        <section className="suggestions">
+        <section className="suggestions space-for-nav">
           <div>
             <h2>Suggestions:</h2>
             <span className="add-suggestion">+Add Suggestion</span>

@@ -1,7 +1,7 @@
-export default function SearchPage() {
+export default function AccountPage() {
   return (
     <section className="space-for-nav">
-      <h2>Hi Search</h2>
+      <h2>Hi Accounts</h2>
     </section>
   );
 }

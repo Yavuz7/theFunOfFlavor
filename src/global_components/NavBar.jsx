@@ -1,7 +1,10 @@
-import SearchPage from "../features/SearchPage/SearchPage";
 import { Routes, Route, Link } from "react-router-dom";
+
+import SearchPage from "../features/SearchPage/SearchPage";
+import AccountPage from "../features/AccountPage.jsx/AccountPage";
 import HomePage from "../features/HomePage/HomePage";
-import "./VoteTitle.scss";
+
+import "./NavBar.scss";
 
 export default function NavBar({ content, votes }) {
   return (
@@ -13,14 +16,14 @@ export default function NavBar({ content, votes }) {
         </Link>
         <div className="nav-buttons">
           <Link to="/recipes">Recipes</Link>
-          <a>My Account</a>
+          <Link to="/search">My Account</Link>
           <a>Settings</a>
         </div>
       </nav>
-
       <Routes>
         <Route path="/*" element={<HomePage />} />
         <Route path="/recipes/*" element={<SearchPage />} />
+        <Route path="/search/*" element={<AccountPage />} />
       </Routes>
     </>
   );

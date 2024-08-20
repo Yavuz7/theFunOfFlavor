@@ -43,7 +43,8 @@ h2 {
   .suggestions {
     background-color: index.$light-yellow;
     min-height: 100vh;
-    padding: index.$padding-for-nav 2% 0 2%;
+    padding-left: 2%;
+    padding-right: 2%;
     min-width: 31%;
     div {
       display: flex;
@@ -80,7 +81,7 @@ nav {
   }
 }
 
-.recipe {
+.space-for-nav {
   padding-top: index.$padding-for-nav;
 }
 
