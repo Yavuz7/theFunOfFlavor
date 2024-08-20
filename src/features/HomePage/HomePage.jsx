@@ -1,4 +1,4 @@
-import VoteItem from "../../global_components/VoteItem";
+import Suggestions from "../Suggestions/Suggestions";
 
 export default function HomePage() {
   //Use effect hook or custom hook to grab JUST suggestions for the appropriate page
@@ -14,17 +14,7 @@ export default function HomePage() {
           </ol>
           <button className="action-button">Explore The Recip-bilities</button>
         </section>
-        <section className="suggestions space-for-nav">
-          <div>
-            <h2>Suggestions:</h2>
-            <span className="add-suggestion">+Add Suggestion</span>
-          </div>
-          <ol>
-            <VoteItem content={"Have Fun Trying New Recipes"} votes={12} />
-            <VoteItem content={"Share Your Wisdom Of Food"} votes={16} />
-            <VoteItem content={"1 Tsp Of Paprika"} votes={2} />
-          </ol>
-        </section>
+        <Suggestions pageId={0} />
         <div className="spacer"></div>
       </div>
     </>
