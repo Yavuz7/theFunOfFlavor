@@ -1,7 +1,7 @@
 import axios from "axios";
 const baseUrl = "/api/recipes";
 
-//Move to RTK query?
+//This should be handled with RTK Query
 const getAll = async () => {
   const request = axios.get(baseUrl);
   return request.then((response) => response);
