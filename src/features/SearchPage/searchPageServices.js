@@ -1,8 +1,13 @@
-import axios from "axios";
-const baseUrl = "/api/recipes";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-//This should be handled with RTK Query
-const getAll = async () => {
-  const request = axios.get(baseUrl);
-  return request.then((response) => response);
-};
+export const searchApi = createApi({
+  name: "searchApi",
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001" }),
+  endpoints: (builder) => ({
+    getRecipes: builder.query({
+      query: () => `/api/recipes`,
+    }),
+  }),
+});
+
+export const { useGetRecipesQuery } = searchApi;
